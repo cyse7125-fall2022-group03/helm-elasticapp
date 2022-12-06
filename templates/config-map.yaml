@@ -1,0 +1,15 @@
+# Configuration for RDS
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ .Release.Name }}-{{ .Values.configmap.name }}
+data:
+  DB_DATABASE: {{ .Values.configmap.dbName }}
+  DB_HOST: {{ .Values.configmap.dbHost | quote }}
+  DB_PORT: {{ .Values.configmap.dbPort | quote }}
+  KAFKA_IP: {{ .Values.configmap.kafkaIp | quote }}
+  KAFKA_PORT: {{ .Values.configmap.kafkaPort | quote }}
+  ELASTIC_HOST: {{ .Values.configmap.elasticHost | quote }}
+  ELASTIC_PORT: {{ .Values.configmap.elasticPort | quote }}
+  KAFKA_TOPIC: {{ .Values.configmap.kafkaTopic | quote }}
