@@ -12,7 +12,6 @@ This repo contains consumer application for kafka & elastic insertion
 ## Commands:
 
 No dependencies.
-```
 To Install chart
 ```
 helm install elasticapp .
